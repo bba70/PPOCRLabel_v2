@@ -1,0 +1,44 @@
+lang: "ch"
+gpu: true
+kie_mode: false
+det_model_dir: null
+rec_model_dir: null
+cls_model_dir: null
+default_predefined_class_file: "data/predefined_classes.txt"
+label_font_path: null
+img_list_natural_sort: true
+bbox_auto_zoom_center: false
+selected_shape_color:
+  - 255
+  - 255
+  - 0
+
+auto_annotation:
+  num: 1
+  paddle:
+    seal_recognition:
+      use_layout_detection: False
+      use_doc_unwarping: False
+      doc_unwarping_model_name: null
+      doc_unwarping_model_dir: null
+      use_doc_orientation_classify: False
+      doc_orientation_classify_model_name: null
+      doc_orientation_classify_model_dir: null
+      # seal_text_detection_model_name: PP-OCRv4_server_seal_det
+      seal_text_detection_model_dir: model/seal_text_detection/inference
+      text_recognition_model_name: PP-OCRv4_server_rec
+      text_recognition_model_dir: null
+    text_recognition:
+      model_name: PP-OCRv5_server_rec
+      model_dir: null
+    text_detection:
+      model_name: PP-OCRv5_server_det
+      model_dir: null
+    table_ocr:
+      use_doc_orientation_classify: False
+      use_doc_unwarping: False
+      use_seal_recognition: True
+      use_table_recognition: True
+      use_formula_recognition: False
+      use_chart_recognition: False
+      use_region_detection: False

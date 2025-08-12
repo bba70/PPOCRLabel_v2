@@ -1,0 +1,2 @@
+resources/icons/* filter=lfs diff=lfs merge=lfs -text
+resources/strings/* filter=lfs diff=lfs merge=lfs -text
